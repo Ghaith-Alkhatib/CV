@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghaith Al-Khatib - CV</title>
-    <link rel="stylesheet" href="Style.Css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="sidebar">
+        <div class="sidebar-toggle"></div> <!-- جزء صغير لعرض القائمة -->
         <a href="#" data-section="about-me">About Me</a>
         <a href="#" data-section="professional-experience">Experience</a>
         <a href="#" data-section="skills">Skills</a>
@@ -29,7 +30,7 @@
             <h3>About Me</h3>
             <p>In July 2023, I transitioned to software development at Xeleration, specializing in back-end development and CRM software. I possess strong technical skills in writing and executing SQL queries, ensuring data integrity and efficient retrieval, and integrating with external systems. Additionally, I have experience in software development using .NET and C#, which enables me to deliver comprehensive and effective software solutions.</p>
         </section>
-        <section id="contact" class="section" data-aos="fade-up">
+        <section id="contact" class="section hidden" data-aos="fade-up">
             <h3>Contact</h3>
             <div class="contact-container">
                 <img src="Ghaith.jpg" alt="Ghaith Al-Khatib" class="profile-picture">
@@ -88,6 +89,7 @@
             <p><strong>Young Engineers Committee, Engineers Association</strong></p>
         </section>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="scripts.js"></script>
 </body>
