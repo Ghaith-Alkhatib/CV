@@ -31,3 +31,11 @@ document.querySelectorAll('.sidebar a').forEach(link => {
 // Show "About Me" and "Contact" sections by default
 showSection('about-me');
 showSection('contact');
+
+// Toggle sidebar visibility
+const sidebarToggle = document.querySelector('.sidebar-toggle');
+const sidebar = document.querySelector('.sidebar');
+
+sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('show');
+});
