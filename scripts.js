@@ -19,8 +19,8 @@ function showSection(sectionId) {
     }
 }
 
-// Event listeners for sidebar links
-document.querySelectorAll('.sidebar a').forEach(link => {
+// Event listeners for menu links
+document.querySelectorAll('.mobile-menu a').forEach(link => {
     link.addEventListener('click', event => {
         event.preventDefault();
         const sectionId = event.target.getAttribute('data-section');
@@ -32,10 +32,10 @@ document.querySelectorAll('.sidebar a').forEach(link => {
 showSection('about-me');
 showSection('contact');
 
-// Toggle sidebar visibility
-const sidebarToggle = document.querySelector('.sidebar-toggle');
-const sidebar = document.querySelector('.sidebar');
+// Toggle mobile menu visibility
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
 
-sidebarToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('show');
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
 });
