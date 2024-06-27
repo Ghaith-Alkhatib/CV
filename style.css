@@ -28,6 +28,20 @@ header {
     flex-direction: column;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
@@ -38,35 +52,52 @@ header h2 {
     font-size: 1.2em;
 }
 
-.main-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #0044cc;
-    color: white;
+.sidebar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -150px;
+    background: #0044cc;
     padding: 10px;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+    transition: left 0.3s ease-in-out;
 }
 
-.mobile-buttons {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
+.sidebar:hover {
+    left: 0;
 }
 
-.mobile-buttons a {
+.sidebar-toggle {
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    width: 20px;
+    height: 40px;
+    background: #0044cc;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.sidebar a,
+.sidebar button {
     color: white;
+    display: block;
     padding: 10px;
     text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    width: 100%;
-    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
 }
 
-.mobile-buttons a:hover {
-    background-color: #003399;
+.sidebar a:hover,
+.sidebar button:hover {
+    background: #003399;
 }
 
 .section {
@@ -203,14 +234,6 @@ i {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .main-header .mobile-buttons {
-        display: flex;
-    }
-
-    .sidebar {
-        display: none;
-    }
-
     .cv-container {
         padding: 10px;
     }
