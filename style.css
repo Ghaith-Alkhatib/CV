@@ -54,35 +54,36 @@ header h2 {
 
 .sidebar {
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -150px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
     background: #0044cc;
     padding: 10px;
-    border-radius: 0 10px 10px 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
-    transition: left 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
 }
 
-.sidebar:hover {
-    left: 0;
+.sidebar.show {
+    transform: translateX(0);
 }
 
 .sidebar-toggle {
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    width: 20px;
-    height: 40px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
     background: #0044cc;
+    color: white;
+    border: none;
     cursor: pointer;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 5px;
+    z-index: 1000;
 }
 
-.sidebar a,
-.sidebar button {
+.sidebar a {
     color: white;
     display: block;
     padding: 10px;
@@ -95,8 +96,7 @@ header h2 {
     text-align: left;
 }
 
-.sidebar a:hover,
-.sidebar button:hover {
+.sidebar a:hover {
     background: #003399;
 }
 
@@ -257,5 +257,9 @@ i {
     .contact-container {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .sidebar {
+        width: 200px;
     }
 }
