@@ -86,10 +86,6 @@ header h2 {
     margin: 20px 0;
 }
 
-.section.hidden {
-    display: none;
-}
-
 h3 {
     color: #0044cc;
     border-bottom: 2px solid #ddd;
@@ -242,6 +238,10 @@ i {
     }
 
     .sidebar {
-        width: 200px;
+        display: none;
+    }
+
+    .section.hidden {
+        display: block; /* Show all sections */
     }
 }
