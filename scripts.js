@@ -3,24 +3,26 @@ AOS.init({
     duration: 1200,
 });
 
-// Function to handle section display
+// Function to handle section display on larger screens
 function showSection(sectionId) {
-    // Hide all sections except "About Me" and "Contact"
-    document.querySelectorAll('.section').forEach(section => {
-        if (section.id !== 'about-me' && section.id !== 'contact') {
-            section.classList.add('hidden');
+    if (window.innerWidth > 768) {
+        // Hide all sections except "About Me" and "Contact"
+        document.querySelectorAll('.section').forEach(section => {
+            if (section.id !== 'about-me' && section.id !== 'contact') {
+                section.classList.add('hidden');
+            }
+        });
+
+        // Show the selected section
+        const selectedSection = document.getElementById(sectionId);
+        if (selectedSection) {
+            selectedSection.classList.remove('hidden');
         }
-    });
-    
-    // Show the selected section
-    const selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-        selectedSection.classList.remove('hidden');
     }
 }
 
 // Event listeners for menu links
-document.querySelectorAll('.mobile-menu a').forEach(link => {
+document.querySelectorAll('.mobile-menu a, .sidebar a').forEach(link => {
     link.addEventListener('click', event => {
         event.preventDefault();
         const sectionId = event.target.getAttribute('data-section');
@@ -28,9 +30,11 @@ document.querySelectorAll('.mobile-menu a').forEach(link => {
     });
 });
 
-// Show "About Me" and "Contact" sections by default
-showSection('about-me');
-showSection('contact');
+// Show "About Me" and "Contact" sections by default on larger screens
+if (window.innerWidth > 768) {
+    showSection('about-me');
+    showSection('contact');
+}
 
 // Toggle mobile menu visibility
 const menuToggle = document.querySelector('.menu-toggle');
