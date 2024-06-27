@@ -9,20 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <h1>Ghaith Al-Khatib</h1>
-            <h2>.NET Developer | C#, ASP.NET Core</h2>
-            <nav class="mobile-buttons">
-                <a href="#" data-section="about-me">About Me</a>
-                <a href="#" data-section="professional-experience">Experience</a>
-                <a href="#" data-section="skills">Skills</a>
-                <a href="#" data-section="education">Education</a>
-                <a href="#" data-section="volunteer-work">Volunteer Work</a>
-            </nav>
-        </div>
-    </header>
+    <div class="sidebar">
+        <div class="sidebar-toggle"></div> <!-- جزء صغير لعرض القائمة -->
+        <a href="#" data-section="about-me">About Me</a>
+        <a href="#" data-section="professional-experience">Experience</a>
+        <a href="#" data-section="skills">Skills</a>
+        <a href="#" data-section="education">Education</a>
+        <a href="#" data-section="volunteer-work">Volunteer Work</a>
+    </div>
     <div class="cv-container">
+        <header>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Ghaith Al-Khatib</h1>
+                    <h2>.NET Developer | C#, ASP.NET Core</h2>
+                </div>
+            </div>
+        </header>
         <section id="about-me" class="section" data-aos="fade-up">
             <h3>About Me</h3>
             <p>In July 2023, I transitioned to software development at Xeleration, specializing in back-end development and CRM software. I possess strong technical skills in writing and executing SQL queries, ensuring data integrity and efficient retrieval, and integrating with external systems. Additionally, I have experience in software development using .NET and C#, which enables me to deliver comprehensive and effective software solutions.</p>
