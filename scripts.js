@@ -19,8 +19,8 @@ function showSection(sectionId) {
     }
 }
 
-// Event listeners for header buttons
-document.querySelectorAll('.mobile-buttons a').forEach(link => {
+// Event listeners for sidebar links
+document.querySelectorAll('.sidebar a').forEach(link => {
     link.addEventListener('click', event => {
         event.preventDefault();
         const sectionId = event.target.getAttribute('data-section');
